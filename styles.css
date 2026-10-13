@@ -1,0 +1,16 @@
+:root{--bg:#f3f3f1;--surface:#fff;--ink:#1a1a1a;--muted:#6a6a6a;--accent:#f0c400;--line:#d7d7d2;--ok:#2c6b52;--warn:#8c5d00}
+*{box-sizing:border-box}html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}body{min-height:100vh}
+.topbar{display:flex;justify-content:space-between;gap:16px;align-items:center;padding:14px 16px;background:var(--ink);color:#fff;position:sticky;top:0;z-index:10}
+.brand{font-weight:800;letter-spacing:.12em;font-size:.95rem}.subtitle{margin-top:3px;font-size:.75rem;color:#d4d4d4}
+.status{font-size:.72rem;padding:6px 9px;border-radius:999px;background:#333;white-space:nowrap}.status.ok{background:var(--ok)}.status.warn{background:var(--warn)}
+.app{max-width:720px;margin:0 auto;padding:14px}.context-card,.camera-card,.summary{background:var(--surface);border:1px solid var(--line);border-radius:14px;margin-bottom:12px}
+.context-card{padding:12px;display:grid;gap:6px}label{font-size:.72rem;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+input{width:100%;padding:11px 12px;border:1px solid var(--line);border-radius:10px;font-size:.95rem;background:#fff}
+.camera-card{overflow:hidden}video{display:block;width:100%;min-height:46vh;max-height:65vh;background:#111;object-fit:cover}
+.camera-actions{display:flex;justify-content:center;align-items:center;gap:18px;padding:14px;background:#fff}
+button{border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer}.secondary{background:#efefec;color:var(--ink);border:1px solid var(--line)}
+.capture{width:68px;height:68px;border-radius:50%;background:#fff;border:6px solid var(--accent);box-shadow:inset 0 0 0 4px var(--ink)}.capture:disabled{opacity:.4;cursor:not-allowed}
+.summary{padding:12px;display:flex;justify-content:space-between;align-items:center;gap:10px}.summary div{display:flex;flex-direction:column}.summary strong{font-size:1.5rem}.summary span{color:var(--muted);font-size:.78rem}
+.gallery{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:20px}.gallery.hidden{display:none}.card{background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden}
+.card img{width:100%;aspect-ratio:1/1;object-fit:cover;display:block}.meta{padding:8px;font-size:.72rem;line-height:1.35}.meta strong{display:block;font-size:.8rem}.meta .tag{color:var(--muted)}
+.footer{max-width:720px;margin:0 auto;padding:4px 14px 18px;color:var(--muted);font-size:.7rem}@media(min-width:600px){.gallery{grid-template-columns:repeat(3,1fr)}}
